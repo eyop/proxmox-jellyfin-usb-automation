@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEMS=="usb", ENV{ID_FS_LABEL}!="" , RUN+="/usr/local/bin/usb-automount.sh add /dev/%k %E{ID_FS_LABEL}"
+ACTION=="remove", SUBSYSTEMS=="usb", ENV{ID_FS_LABEL}!="" , RUN+="/usr/local/bin/usb-automount.sh remove /dev/%k %E{ID_FS_LABEL}"
